@@ -1,0 +1,23 @@
+GET http://localhost:8000/jieba
+Accept: application/json
+
+###
+POST http://localhost:8000/extract
+Accept: application/json
+Content-Type: application/json
+
+{
+  "text": "建设单位隐瞒有关情况或者提供虚假材料申请施工许可证的，发证机关不予受理或者不予许可，并处1.8元以上三十万元以下罚款；构成犯罪的，依法追究刑事责任。"
+}
+
+<> 2022-08-24T173028.200.json
+<> 2022-08-24T173003.404.txt
+
+###
+GET http://localhost:8000/train/lac
+Accept: application/json
+Content-Type: application/json
+
+<> 2022-08-24T170534.200.json
+<> 2022-08-24T170458.200.json
+

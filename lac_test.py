@@ -1,30 +1,21 @@
+import paddle
+import uvicorn as uvicorn
 from LAC import LAC
+from fastapi import FastAPI
 
-# 装载分词模型
-lac = LAC(mode='seg')
-
-# 单个样本输入，输入为Unicode编码的字符串
-text = u"LAC是个优秀的分词工具"
-seg_result = lac.run(text)
-print(seg_result)
-# 批量样本输入, 输入为多个句子组成的list，平均速率会更快
-texts = [u"LAC是个优秀的分词工具", u"百度是一家高科技公司"]
-seg_result = lac.run(texts)
-print(seg_result)
-
-# 装载LAC模型
-lac = LAC(mode='lac', model_path="")
-# 标签	含义	    标签	含义	    标签	    含义	    标签	    含义
-# n	    普通名词	f	方位名词	s	    处所名词	nw	    作品名
-# nz	其他专名	v	普通动词	vd	    动副词	vn	    名动词
-# a	    形容词	ad	副形词	an	    名形词	d	    副词
-# m 	数量词	q	量词	    r	    代词	    p	    介词
-# c	    连词	    u	助词	    xc	    其他虚词	w	    标点符号
-# PER	人名	    LOC	地名	O   RG	    机构名	TIME	时间
+paddle.enable_static()
 
 # 批量样本输入, 输入为多个句子组成的list，平均速率更快
-texts = [u"第一条　根据《中华人民共和国进出口商品检验法》(以下简称商检法)的规定，制定本条例。",
-         u"第二条　海关总署主管全国进出口商品检验工作。"]
-lac_result = lac.run(texts)
-print(lac_result[0])
-print(lac_result[1])
+texts = [u"第一条 根据《中华人民共和国进出口商品检验法》(以下简称商检法)的规定，制定本条例。",
+         u"建设单位隐瞒有关情况或者提供虚假材料申请施工许可证的，发证机关不予受理或者不予许可，并处1.8元以上三十万元以下罚款；构成犯罪的，依法追究刑事责任。"]
+# lac_result = lac.run(texts)
+# print(lac_result[1])
+my_lac = LAC(model_path="my_lac_model")
+# train_file = "./data/train.tsv"
+# test_file = "./data/test.tsv"
+# my_lac.train(model_save_dir='./my_lac_model/', train_data=train_file, test_data=test_file)
+custom = "./data/custom.tsv"
+# my_lac.load_customization(custom)
+lac_result = my_lac.run(texts[1])
+lac_result = dict(zip(lac_result[0], lac_result[1]))
+print(lac_result)

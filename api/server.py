@@ -29,16 +29,17 @@ async def train(mode: str):
 # u"建设单位隐瞒有关情况或者提供虚假材料申请施工许可证的，发证机关不予受理或者不予许可，并处1.8元以上三十万元以下罚款；构成犯罪的，依法追究刑事责任。"]
 class ExtractItem(BaseModel):
     text: str
+    mode: str = "lac"
 
 
 @app.post("/extract")
 async def extract(args: ExtractItem):
-    my_lac = LAC(model_path="../my_lac_model")
-    custom = "../data/custom.tsv"
+    my_lac = LAC(model_path="../my_lac_model", mode=args.mode)
+    text = unicode(args.text)
     # 装载干预词典, sep参数表示词典文件采用的分隔符，为None时默认使用空格或制表符'\t'
+    custom = "../data/custom.tsv"
     my_lac.load_customization(custom)
-    # 文本必须转换成unicode格式
-    lac_result = my_lac.run(unicode(args.text))
+    lac_result = my_lac.run(text)
     lac_result = list(zip(lac_result[0], lac_result[1]))
     return {"code": 200, "data": lac_result}
 

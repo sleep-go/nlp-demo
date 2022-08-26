@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="section" id="part-ii">
+    <h2>PART Ⅱ   定制化训练<a class="headerlink" href="#part-ii" title="永久链接至标题">¶</a></h2>
+    <details open=""><summary>适配任务列表</summary><div><p>如果你有自己的业务数据集，可以对模型效果进一步调优，支持定制化训练的任务如下：</p>
+        <div class="wy-table-responsive"><table border="1" class="docutils">
+            <thead>
+            <tr>
+                <th align="center">任务名称</th>
+                <th align="center">默认路径</th>
+                <th align="center"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td align="center"><code>Taskflow("word_segmentation", mode="base")</code></td>
+                <td align="center"><code>$HOME/.paddlenlp/taskflow/lac</code></td>
+                <td align="center"><a href="https://github.com/PaddlePaddle/PaddleNLP/tree/develop/examples/lexical_analysis">示例</a></td>
+            </tr>
+            <tr>
+                <td align="center"><code>Taskflow("word_segmentation", mode="accurate")</code></td>
+                <td align="center"><code>$HOME/.paddlenlp/taskflow/wordtag</code></td>
+                <td align="center"><a href="https://github.com/PaddlePaddle/PaddleNLP/tree/develop/examples/text_to_knowledge/ernie-ctm">示例</a></td>
+            </tr>
+            <tr>
+                <td align="center"><code>Taskflow("pos_tagging")</code></td>
+                <td align="center"><code>$HOME/.paddlenlp/taskflow/lac</code></td>
+                <td align="center"><a href="https://github.com/PaddlePaddle/PaddleNLP/tree/develop/examples/lexical_analysis">示例</a></td>
+            </tr>
+            <tr>
+                <td align="center"><code>Taskflow("ner", mode="fast")</code></td>
+                <td align="center"><code>$HOME/.paddlenlp/taskflow/lac</code></td>
+                <td align="center"><a href="https://github.com/PaddlePaddle/PaddleNLP/tree/develop/examples/lexical_analysis">示例</a></td>
+            </tr>
+            <tr>
+                <td align="center"><code>Taskflow("ner", mode="accurate")</code></td>
+                <td align="center"><code>$HOME/.paddlenlp/taskflow/wordtag</code></td>
+                <td align="center"><a href="https://github.com/PaddlePaddle/PaddleNLP/tree/develop/examples/text_to_knowledge/ernie-ctm">示例</a></td>
+            </tr>
+            <tr>
+                <td align="center"><code>Taskflow("information_extraction", model="uie-base")</code></td>
+                <td align="center"><code>$HOME/.paddlenlp/taskflow/information_extraction/uie-base</code></td>
+                <td align="center"><a href="https://github.com/PaddlePaddle/PaddleNLP/tree/develop/model_zoo/uie">示例</a></td>
+            </tr>
+            <tr>
+                <td align="center"><code>Taskflow("information_extraction", model="uie-tiny")</code></td>
+                <td align="center"><code>$HOME/.paddlenlp/taskflow/information_extraction/uie-tiny</code></td>
+                <td align="center"><a href="https://github.com/PaddlePaddle/PaddleNLP/tree/develop/model_zoo/uie">示例</a></td>
+            </tr>
+            <tr>
+                <td align="center"><code>Taskflow("text_correction", model="ernie-csc")</code></td>
+                <td align="center"><code>$HOME/.paddlenlp/taskflow/text_correction/ernie-csc</code></td>
+                <td align="center"><a href="https://github.com/PaddlePaddle/PaddleNLP/tree/develop/examples/text_correction/ernie-csc">示例</a></td>
+            </tr>
+            <tr>
+                <td align="center"><code>Taskflow("dependency_parsing", model="ddparser")</code></td>
+                <td align="center"><code>$HOME/.paddlenlp/taskflow/dependency_parsing/ddparser</code></td>
+                <td align="center"><a href="https://github.com/PaddlePaddle/PaddleNLP/tree/develop/examples/dependency_parsing/ddparser">示例</a></td>
+            </tr>
+            <tr>
+                <td align="center"><code>Taskflow("dependency_parsing", model="ddparser-ernie-1.0")</code></td>
+                <td align="center"><code>$HOME/.paddlenlp/taskflow/dependency_parsing/ddparser-ernie-1.0</code></td>
+                <td align="center"><a href="https://github.com/PaddlePaddle/PaddleNLP/tree/develop/examples/dependency_parsing/ddparser">示例</a></td>
+            </tr>
+            <tr>
+                <td align="center"><code>Taskflow("dependency_parsing", model="ddparser-ernie-gram-zh")</code></td>
+                <td align="center"><code>$HOME/.paddlenlp/taskflow/dependency_parsing/ddparser-ernie-gram-zh</code></td>
+                <td align="center"><a href="https://github.com/PaddlePaddle/PaddleNLP/tree/develop/examples/dependency_parsing/ddparser">示例</a></td>
+            </tr>
+            <tr>
+                <td align="center"><code>Taskflow("sentiment_analysis", model="skep_ernie_1.0_large_ch")</code></td>
+                <td align="center"><code>$HOME/.paddlenlp/taskflow/sentiment_analysis/skep_ernie_1.0_large_ch</code></td>
+                <td align="center"><a href="https://github.com/PaddlePaddle/PaddleNLP/tree/develop/examples/sentiment_analysis/skep">示例</a></td>
+            </tr>
+            <tr>
+                <td align="center"><code>Taskflow("knowledge_mining", model="wordtag")</code></td>
+                <td align="center"><code>$HOME/.paddlenlp/taskflow/wordtag</code></td>
+                <td align="center"><a href="https://github.com/PaddlePaddle/PaddleNLP/tree/develop/examples/text_to_knowledge/ernie-ctm">示例</a></td>
+            </tr>
+            <tr>
+                <td align="center"><code>Taskflow("knowledge_mining", model="nptag")</code></td>
+                <td align="center"><code>$HOME/.paddlenlp/taskflow/knowledge_mining/nptag</code></td>
+                <td align="center"><a href="https://github.com/PaddlePaddle/PaddleNLP/tree/develop/examples/text_to_knowledge/nptag">示例</a></td>
+            </tr>
+            </tbody>
+        </table></div></div></details><details><summary>定制化训练示例</summary><div><p>这里我们以命名实体识别<code class="docutils literal notranslate"><span class="pre">Taskflow("ner",</span> <span class="pre">mode="accurate")</span></code>为例，展示如何定制自己的模型。</p>
+    <p>调用<code class="docutils literal notranslate"><span class="pre">Taskflow</span></code>接口后，程序自动将相关文件下载到<code class="docutils literal notranslate"><span class="pre">$HOME/.paddlenlp/taskflow/wordtag/</span></code>，该默认路径包含以下文件:</p>
+    <div class="highlight-text notranslate"><div class="highlight"><pre id="codecell57"><span></span>$HOME/.paddlenlp/taskflow/wordtag/
+├── model_state.pdparams # 默认模型参数文件
+├── model_config.json # 默认模型配置文件
+└── tags.txt # 默认标签文件
+</pre><a class="copybtn o-tooltip--left" style="background-color: rgba(0, 0, 0, 0)" data-tooltip="Copy" data-clipboard-target="#codecell57">
+        <img src="../_static/copy-button.svg" alt="Copy to clipboard">
+    </a></div>
+    </div>
+    <ul class="simple">
+        <li><p>参考上表中对应<a class="reference external" href="https://github.com/PaddlePaddle/PaddleNLP/tree/develop/examples/text_to_knowledge/ernie-ctm">示例</a>准备数据集和标签文件<code class="docutils literal notranslate"><span class="pre">tags.txt</span></code>，执行相应训练脚本得到自己的<code class="docutils literal notranslate"><span class="pre">model_state.pdparams</span></code>和<code class="docutils literal notranslate"><span class="pre">model_config.json</span></code>。</p></li>
+        <li><p>根据自己数据集情况，修改标签文件<code class="docutils literal notranslate"><span class="pre">tags.txt</span></code>。</p></li>
+        <li><p>将以上文件保存到任意路径中，自定义路径下的文件需要和默认路径的文件一致:</p></li>
+    </ul>
+    <div class="highlight-text notranslate"><div class="highlight"><pre id="codecell58"><span></span>custom_task_path/
+├── model_state.pdparams # 定制模型参数文件
+├── model_config.json # 定制模型配置文件
+└── tags.txt # 定制标签文件
+</pre><a class="copybtn o-tooltip--left" style="background-color: rgba(0, 0, 0, 0)" data-tooltip="Copy" data-clipboard-target="#codecell58">
+        <img src="../_static/copy-button.svg" alt="Copy to clipboard">
+    </a></div>
+    </div>
+    <ul class="simple">
+        <li><p>通过<code class="docutils literal notranslate"><span class="pre">task_path</span></code>指定自定义路径，使用Taskflow加载自定义模型进行一键预测：</p></li>
+    </ul>
+    <div class="highlight-python notranslate"><div class="highlight"><pre id="codecell59"><span></span><span class="kn">from</span> <span class="nn">paddlenlp</span> <span class="kn">import</span> <span class="n">Taskflow</span>
+<span class="n">my_ner</span> <span class="o">=</span> <span class="n">Taskflow</span><span class="p">(</span><span class="s2">"ner"</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">"accurate"</span><span class="p">,</span> <span class="n">task_path</span><span class="o">=</span><span class="s2">"./custom_task_path/"</span><span class="p">)</span>
+</pre><a class="copybtn o-tooltip--left" style="background-color: rgba(0, 0, 0, 0)" data-tooltip="Copy" data-clipboard-target="#codecell59">
+        <img src="../_static/copy-button.svg" alt="Copy to clipboard">
+    </a></div>
+    </div>
+</div></details></div>
+<div class="section" id="id69">
+    <h2>模型算法<a class="headerlink" href="#id69" title="永久链接至标题">¶</a></h2>
+    <details><summary>模型算法说明</summary><div><table>
+        <tbody><tr><td>任务名称</td><td>模型</td><td>模型详情</td><td>训练集
+        </td></tr><tr><td rowspan="3">中文分词</td><td>默认模式: BiGRU+CRF</td><td>  <a href="https://github.com/PaddlePaddle/PaddleNLP/tree/develop/examples/lexical_analysis"> 训练详情 </a></td><td> 百度自建数据集，包含近2200万句子，覆盖多种场景
+        </td></tr><tr><td>快速模式：Jieba</td><td> - </td><td> -
+        </td></tr><tr><td>精确模式：WordTag</td><td> <a href="https://github.com/PaddlePaddle/PaddleNLP/tree/develop/examples/text_to_knowledge/ernie-ctm"> 训练详情 </a></td><td> 百度自建数据集，词类体系基于TermTree构建
+        </td></tr><tr><td>词性标注</td><td>BiGRU+CRF</td><td> <a href="https://github.com/PaddlePaddle/PaddleNLP/tree/develop/examples/lexical_analysis"> 训练详情 </a></td><td> 百度自建数据集，包含2200万句子，覆盖多种场景
+        </td></tr><tr><td rowspan="2">命名实体识别</td><td>精确模式：WordTag</td><td> <a href="https://github.com/PaddlePaddle/PaddleNLP/tree/develop/examples/text_to_knowledge/ernie-ctm"> 训练详情 </a></td><td> 百度自建数据集，词类体系基于TermTree构建
+        </td></tr><tr><td>快速模式：BiGRU+CRF </td><td> <a href="https://github.com/PaddlePaddle/PaddleNLP/tree/develop/examples/lexical_analysis"> 训练详情 </a></td><td> 百度自建数据集，包含2200万句子，覆盖多种场景
+        </td></tr><tr><td>依存句法分析</td><td>DDParser</td><td> <a href="https://github.com/PaddlePaddle/PaddleNLP/tree/develop/examples/dependency_parsing/ddparser"> 训练详情 </a></td><td> 百度自建数据集，DuCTB 1.0中文依存句法树库
+        </td></tr><tr><td rowspan="2">信息抽取</td><td> UIE-Base </td><td> <a href="https://github.com/PaddlePaddle/PaddleNLP/tree/develop/examples/information_extraction/uie"> 训练详情 </a></td><td> 百度自建数据集
+        </td></tr><tr><td> UIE-Tiny </td><td> <a href="https://github.com/PaddlePaddle/PaddleNLP/tree/develop/examples/sentiment_analysis/skep"> 训练详情 </a></td><td> 百度自建数据集
+        </td></tr><tr><td rowspan="2">解语知识标注</td><td>词类知识标注：WordTag</td><td> <a href="https://github.com/PaddlePaddle/PaddleNLP/tree/develop/examples/text_to_knowledge/ernie-ctm"> 训练详情 </a></td><td> 百度自建数据集，词类体系基于TermTree构建
+        </td></tr><tr><td>名词短语标注：NPTag </td><td> <a href="https://github.com/PaddlePaddle/PaddleNLP/tree/develop/examples/text_to_knowledge/nptag"> 训练详情 </a></td><td> 百度自建数据集
+        </td></tr><tr><td>文本纠错</td><td>ERNIE-CSC</td><td> <a href="https://github.com/PaddlePaddle/PaddleNLP/tree/develop/examples/text_correction/ernie-csc"> 训练详情 </a></td><td> SIGHAN简体版数据集及 <a href="https://github.com/wdimmy/Automatic-Corpus-Generation/blob/master/corpus/train.sgml"> Automatic Corpus Generation生成的中文纠错数据集
+        </a></td></tr><tr><td>文本相似度</td><td>SimBERT</td><td> - </td><td> 收集百度知道2200万对相似句组
+        </td></tr><tr><td rowspan="2">情感倾向分析</td><td> BiLSTM </td><td> - </td><td> 百度自建数据集
+        </td></tr><tr><td> SKEP </td><td> <a href="https://github.com/PaddlePaddle/PaddleNLP/tree/develop/examples/sentiment_analysis/skep"> 训练详情 </a></td><td> 百度自建数据集
+        </td></tr><tr><td>生成式问答</td><td>CPM</td><td> - </td><td> 100GB级别中文数据
+        </td></tr><tr><td>智能写诗</td><td>CPM</td><td> - </td><td> 100GB级别中文数据
+        </td></tr><tr><td>开放域对话</td><td>PLATO-Mini</td><td> - </td><td> 十亿级别中文对话数据
+        </td></tr></tbody></table></div></details></div>
+<div class="section" id="faq">
+    <h2>FAQ<a class="headerlink" href="#faq" title="永久链接至标题">¶</a></h2>
+    <details><summary><b>Q：</b>Taskflow如何修改任务保存路径？</summary><div><p><strong>A:</strong> Taskflow默认会将任务相关模型等文件保存到<code class="docutils literal notranslate"><span class="pre">$HOME/.paddlenlp</span></code>下，可以在任务初始化的时候通过<code class="docutils literal notranslate"><span class="pre">home_path</span></code>自定义修改保存路径。示例：</p>
+        <div class="highlight-python notranslate"><div class="highlight"><pre id="codecell60"><span></span><span class="kn">from</span> <span class="nn">paddlenlp</span> <span class="kn">import</span> <span class="n">Taskflow</span>
+
+<span class="n">ner</span> <span class="o">=</span> <span class="n">Taskflow</span><span class="p">(</span><span class="s2">"ner"</span><span class="p">,</span> <span class="n">home_path</span><span class="o">=</span><span class="s2">"/workspace"</span><span class="p">)</span>
+</pre><a class="copybtn o-tooltip--left" style="background-color: rgba(0, 0, 0, 0)" data-tooltip="Copy" data-clipboard-target="#codecell60">
+            <img src="../_static/copy-button.svg" alt="Copy to clipboard">
+        </a></div>
+        </div>
+        <p>通过以上方式即可将ner任务相关文件保存至<code class="docutils literal notranslate"><span class="pre">/workspace</span></code>路径下。</p>
+    </div></details><details><summary><b>Q：</b>下载或调用模型失败，多次下载均失败怎么办？</summary><div><p><strong>A:</strong> Taskflow默认会将任务相关模型等文件保存到<code class="docutils literal notranslate"><span class="pre">$HOME/.paddlenlp/taskflow</span></code>下，如果下载或调用失败，可删除相应路径下的文件，重新尝试即可</p>
+</div></details><details><summary><b>Q：</b>Taskflow如何提升预测速度？</summary><div><p><strong>A:</strong> 可以结合设备情况适当调整batch_size，采用批量输入的方式来提升平均速率。示例：</p>
+    <div class="highlight-python notranslate"><div class="highlight"><pre id="codecell61"><span></span><span class="kn">from</span> <span class="nn">paddlenlp</span> <span class="kn">import</span> <span class="n">Taskflow</span>
+
+<span class="c1"># 精确模式模型体积较大，可结合机器情况适当调整batch_size，采用批量样本输入的方式。</span>
+<span class="n">seg_accurate</span> <span class="o">=</span> <span class="n">Taskflow</span><span class="p">(</span><span class="s2">"word_segmentation"</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">"accurate"</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span>
+
+<span class="c1"># 批量样本输入，输入为多个句子组成的list，预测速度更快</span>
+<span class="n">texts</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"热梅茶是一道以梅子为主要原料制作的茶饮"</span><span class="p">,</span> <span class="s2">"《孤女》是2010年九州出版社出版的小说，作者是余兼羽"</span><span class="p">]</span>
+<span class="n">seg_accurate</span><span class="p">(</span><span class="n">texts</span><span class="p">)</span>
+</pre><a class="copybtn o-tooltip--left" style="background-color: rgba(0, 0, 0, 0)" data-tooltip="Copy" data-clipboard-target="#codecell61">
+        <img src="../_static/copy-button.svg" alt="Copy to clipboard">
+    </a></div>
+    </div>
+    <p>通过上述方式进行分词可以大幅提升预测速度。</p>
+</div></details><details><summary><b>Q：</b>后续会增加更多任务支持吗？</summary><div><p><strong>A:</strong> Taskflow支持任务持续丰富中，我们将根据开发者反馈，灵活调整功能建设优先级，可通过Issue或<a class="reference external" href="https://wenjuan.baidu-int.com/manage/?r=survey/pageEdit&amp;sid=85827">问卷</a>反馈给我们。</p>
+</div></details></div>
+<div class="section" id="id70">
+    <h2>附录<a class="headerlink" href="#id70" title="永久链接至标题">¶</a></h2>
+    <details><summary><b>参考资料</b> </summary><div><ol class="simple">
+        <li><p><a class="reference external" href="https://github.com/fxsjy/jieba">fxsjy/jieba</a></p></li>
+        <li><p><a class="reference external" href="https://github.com/ZhuiyiTechnology/simbert">ZhuiyiTechnology/simbert</a></p></li>
+        <li><p><a class="reference external" href="https://arxiv.org/abs/2012.00413">CPM: A Large-scale Generative Chinese Pre-trained Language Model</a></p></li>
+    </ol>
+    </div></details></div>
+</body>
+</html>
